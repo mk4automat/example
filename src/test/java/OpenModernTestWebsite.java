@@ -6,4 +6,6 @@ public class OpenModernTestWebsite extends TestBase{
     public void shouldOpenModernTesterWebsite(){
         driver.get("https://seleniumui.moderntester.pl/");
     }
+
+
 }
