@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class OpenModernTestWebsite extends TestBase{
+public class BOpenModernTestWebsite extends ATestBase {
 
     @Test
     public void shouldOpenModernTesterWebsite(){

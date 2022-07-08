@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class firstTest extends TestBase {
+public class CfirstTest extends ATestBase {
 
     @Test
     public void openGooglePage() {
@@ -29,6 +29,7 @@ public class firstTest extends TestBase {
         // znalezc rezultat
         WebElement result = driver.findElement(By.xpath("//a[contains(@href,'selenium.dev')]//h3"));
 
+        // Asercja czy element result jest wyświetlony
         Assert.assertTrue(result.isDisplayed());
     }
 }

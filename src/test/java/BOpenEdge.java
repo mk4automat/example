@@ -2,7 +2,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
-public class OpenEdge {
+public class BOpenEdge {
 
     @Test
     public void openGoogleEdgePage() {
