@@ -19,8 +19,8 @@ public class ATestBase {
         driver = new ChromeDriver(options);
     }
 
-    @AfterMethod
-    public void tearDown(){
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown(){
+//        driver.quit();
+//    }
 }
