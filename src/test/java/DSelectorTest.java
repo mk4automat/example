@@ -44,8 +44,7 @@ public class DSelectorTest extends ATestBase{
 
         //Element po części tekstu
         By partialLinkText = By.partialLinkText("IamWeirdL");
-        WebElement partialLink = driver.findElement(partialLinkText);
-
+        WebElement schoolPartial = driver.findElement(partialLinkText);
 
 
     }
