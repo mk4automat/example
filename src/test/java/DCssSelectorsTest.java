@@ -11,6 +11,8 @@ public class DCssSelectorsTest extends ATestBase {
 
         driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
 
+        //w konsoli: $$("")
+
         //Element css który ma konkretne id
         By cssId = By.cssSelector("#clickOnMe");
         WebElement cssElementClick = driver.findElement(cssId);
