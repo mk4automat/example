@@ -2,7 +2,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class DCssSelectorsTest extends ATestBase{
+import java.util.List;
+
+public class DCssSelectorsTest extends ATestBase {
 
     @Test
     public void findElementsByCss() {
@@ -43,7 +45,7 @@ public class DCssSelectorsTest extends ATestBase{
 
         // Pierwsze dziecko jest z >, czyli table > tbody > tr
 
-         //Pierwszy element "form" ktory jest po tagu "label", nie w nim, tylko na tym samym poziomie
+        //Pierwszy element "form" ktory jest po tagu "label", nie w nim, tylko na tym samym poziomie
         By firstFormUnderLabel = By.cssSelector("label + form");
         driver.findElement(firstFormUnderLabel);
 
@@ -51,7 +53,38 @@ public class DCssSelectorsTest extends ATestBase{
         By everyFormsUnderLabel = By.cssSelector("label ~ form");
         driver.findElement(everyFormsUnderLabel);
 
-        //
+        //Zawężenie wartości fname tylko do inputa
+        By onlyInput = By.cssSelector("input[name='fname']");
+        driver.findElement(onlyInput);
+
+        //Z gwiazdką, szukamy dla wszystkich name, zawiera "ame"
+        By ameForEveryInput = By.cssSelector("input[name*='ame']");
+        WebElement manyAme = driver.findElement(ameForEveryInput);
+
+        //Wyswietlenie ilości znalezionych ameForEveryInput w konsoli
+        List<WebElement> inputs = driver.findElements(ameForEveryInput);
+        //wypisać długoś listy
+        System.out.println(inputs.size());
+
+        //Z daszkiem, szukamy dla name, który zaczyna się od "f"
+        By inputFromF = By.cssSelector("input[name^='f']");
+        driver.findElement(inputFromF);
+
+        //Z $, szukamy dla name, który konczy się na "ame"
+        By attrEnds = By.cssSelector("input[name$='ame']");
+        driver.findElement(attrEnds);
+        List<WebElement> inputs2 = driver.findElements(attrEnds);
+        //wypisać długoś listy
+        System.out.println(inputs2.size());
+
+        //Pierwsze dziecko z listy "li:first-child", ostatnie "li:last-child", kolejne(np.2) "li:nth-child(2)"
+        By firstChild = By.cssSelector("li:first-child");
+        By lastChild = By.cssSelector("li:last-child");
+        By secondChild = By.cssSelector("li:nth-child(2)");
+
+        driver.findElements(firstChild);
+        driver.findElements(lastChild);
+        driver.findElements(secondChild);
 
     }
 }
