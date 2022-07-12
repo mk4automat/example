@@ -1,10 +1,12 @@
+package DSelectors;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class DXpathTest extends ATestBase{
+public class DXpathTest extends ATestBase {
 
     @Test
     public  void findElements(){

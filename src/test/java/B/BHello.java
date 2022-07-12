@@ -1,3 +1,5 @@
+package B;
+
 public class BHello {
 
     public static void main(String[] args) {
