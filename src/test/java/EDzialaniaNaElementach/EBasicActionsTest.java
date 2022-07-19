@@ -118,7 +118,6 @@ public class EBasicActionsTest extends ATestBase {
 
         driver.switchTo().alert().accept();
 
-
     }
 
 }
