@@ -16,4 +16,14 @@ public class UploadPliku extends ATestBase{
         driver.findElement(By.id("myFile")).sendKeys("C:\\Users\\marcin\\Desktop\\selenium_plik\\pierwszy.txt");
 
     }
+
+    @Test
+    public void uploadPLiku2() {
+
+        driver.get("https://testeroprogramowania.github.io/selenium/fileupload.html");
+
+        //Zewnętrzne narzędzie sikuli (w google "sikulix file upload"/ 189)
+
+
+    }
 }
